@@ -222,6 +222,10 @@ describe "Teaspoon.Reporters.HTML", ->
       @reporter.reportRunnerResults()
       expect(@updateProgressSpy).toHaveBeenCalled()
 
+    it "tells Teaspoon that we're finished", ->
+      @reporter.reportRunnerResults()
+      expect(Teaspoon.finished).toEqual(true)
+      Teaspoon.finished = false
 
   describe "#updateStat", ->
 
