@@ -48,7 +48,7 @@ class Teaspoon.Reporters.HTML extends Teaspoon.Reporters.BaseView
       @total.run = @total.exist
     @setText("stats-skipped", @total.skipped)
     @updateProgress()
-
+    Teaspoon.finished = true
 
   reportSuiteStarting: (suite) -> # noop
 
